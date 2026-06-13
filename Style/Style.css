@@ -88,7 +88,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: black;
+    color: var(--second);
     display: inline-block;
     font-size: 2.5rem;
     margin-left: 7.5rem;
@@ -187,7 +187,6 @@ body {
         font-size: 62.5%;
     }
 
-    
     #menu {
         display: inline-block;
     }
@@ -234,6 +233,7 @@ body {
     .container .nav.active {
         right: 0;
     }
+    
 }
 
 /* Mobile */
