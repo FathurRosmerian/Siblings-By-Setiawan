@@ -1,0 +1,248 @@
+:root {
+    --Main: #fddd5a;
+    --second: #baa56c
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--Main);
+    color: var(--second);
+    height: 2000px;
+}
+
+/* Navbar */
+.container {
+    color: var(--Main);
+    background-color: var(--Main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 5%;
+    border-bottom: 3px solid var(--second);
+    border-top: 3px solid var(--second);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.container .nav a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--second);
+    display: inline-block;
+    font-size: 1.7rem;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container .nav a:hover {
+    color: #125387;
+}
+
+.container .nav a::after {
+    content: '';
+    display: block;
+    padding: 0.1rem;
+    border-bottom: 0.1rem solid #125387;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.container .nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.container .logo {
+    display: flex;
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.container .icon a {
+    color: var(--second);
+    margin: 0 0.5rem;
+}
+
+.container .icon a:hover {
+    color: #125387;
+}
+
+#menu {
+    display: none;
+}
+
+.container .main a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-left: 7.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+}
+
+.container .main a:hover {
+    color: #125387;
+}
+
+.container .main a::after {
+    content: '';
+    display: block;
+    padding: 0.1rem;
+    border-bottom: 0.1rem solid #125387;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.container .main a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Navbar End */
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .content {
+    padding: 1.5rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5em;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.hero .content p {
+    color: black;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 250;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #ffdf98;
+    background-color: #125387;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* Hero End */
+
+/* Section Start*/
+.about {
+    color: #125387;
+    padding: 9rem 7% 1.4rem;
+}
+
+.about h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    
+    #menu {
+        display: inline-block;
+    }
+
+    .container .nav a {
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .container .nav a:hover {
+        color: #ffdf98;
+    }
+
+    .container .nav a::after {
+        content: '';
+        display: block;
+        padding: 0.1rem;
+        border-bottom: 0.1rem solid #ffdf98;
+        transform-origin: 0 0;
+        transition: 0.2s linear;
+    }
+
+    .container .nav a:hover::after {
+        transform: scaleX(0.4);
+    }
+    
+    .container .nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #125387;
+        width: 20rem;
+        height: 100vh;
+        transition: 1s;
+    }
+    
+    .container .main a {
+        display: inline-block;
+    }
+
+    .container .nav.active {
+        right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    #main {
+    display: inline-block;
+    }
+}
